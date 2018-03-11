@@ -12,8 +12,6 @@ import android.widget.EditText;
 
 public class AFragment extends Fragment {
 
-    private Button enterButton;
-    private EditText text;
     //Step 7A
     private OnClickEnterButtonListener mOnClickEnterButtonListenerObject;
 
@@ -34,8 +32,8 @@ public class AFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view =  inflater.inflate(R.layout.fragment_a, container, false);
-        enterButton = (Button) view.findViewById(R.id.enter);
-        text = (EditText) view.findViewById(R.id.aFragEText);
+        Button enterButton = (Button) view.findViewById(R.id.enter);
+        final EditText text = (EditText) view.findViewById(R.id.aFragEText);
         enterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
